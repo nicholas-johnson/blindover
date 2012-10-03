@@ -1,10 +1,12 @@
 (function($) {
   /* obscure content with blind */
-  $.fn.blind_over = function() {
+  $.fn.blindOver = function() {
     this.each(function(i,el) {
       el = $(el);
-      el.css({position:'relative'});
-      var blind = $('<div class="blind"></div>');
+      if (!el.is('body') && !(el.css('position') === 'absolute')) {
+        el.css({position:'relative'});
+      }
+      var blind = $('<div class="blindover"></div>');
       blind.css({
         height: el.height()+'px',
         width: el.width()+'px',
