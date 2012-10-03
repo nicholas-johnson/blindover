@@ -3,6 +3,7 @@
   $.fn.blindOver = function() {
     this.each(function(i,el) {
       el = $(el);
+      el.addClass('blinded');
       if (!el.is('body') && !(el.css('position') === 'absolute')) {
         el.css({position:'relative'});
       }
