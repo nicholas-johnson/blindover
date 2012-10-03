@@ -1,7 +1,7 @@
 Blind Over
 ==========
 
-A cute jQuery plugin to shade over and visually disable any element. Use it to indicate that
+A cute jQuery plugin to shade over and visually disable any element. Use it to indicate that an element has been interacted with and is busy, or to direct the user to a popup for example.
 
 ## Usage
 
