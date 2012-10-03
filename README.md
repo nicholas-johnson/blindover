@@ -1,7 +1,7 @@
 Blind Over
 ==========
 
-A jQuery plugin to shade over and disable any element.
+A cute jQuery plugin to shade over and visually disable any element. Use it to indicate that
 
 ## Usage
 
@@ -19,8 +19,11 @@ You can blind the entire page. Use:
       $('body').blindOver();
     });
 
-Chaining:
+Chaining is supported (of course):
 
+    $(function() {
+      $('section').blindOver().css('color','red');
+    });
 
 ## Caveats
 
@@ -28,6 +31,10 @@ A new element will be created with the same width and height as the element to b
 
 The blinded element will be set to be position relative if it is not already position absolute and it is not the root.
 
-Blinded elements cannot be clicked on or interacted with using the mouse. You will still be able to access blinded elements using the keyboard though. This is a UI nicety, not a security feature!
+The blind will have a class of blindover. You can apply CSS styling to it directly if you like, in your CSS, or in jQuery.
+
+## UX is not Security!
+
+Blinded elements cannot be clicked on or interacted with using the mouse. You will still be able to access blinded elements using the keyboard though. This is a UX nicety, not a security feature!
 
 The blind does not currently update when the element changes size.
